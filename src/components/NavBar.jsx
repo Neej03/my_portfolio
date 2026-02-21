@@ -3,7 +3,7 @@ import OverlayMenu from "./OverlayMenu";
 import Logo from "../assets/logo.png";
 import { FiMenu } from "react-icons/fi";
 
-export default function Navbar() {
+export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [visible, setVisible] = useState(true);
   const [forceVisible, setForceVisible] = useState(false);
