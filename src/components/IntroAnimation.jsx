@@ -1,3 +1,6 @@
+import { useState, useEffect, useMemo } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
 export default function IntroAnimation({ onFinish }) {
   const greetings = useMemo(() => [
     "Hello", "Hola", "Bonjour",
@@ -5,8 +8,8 @@ export default function IntroAnimation({ onFinish }) {
     "Merhaba", "Γειά", "Hej", "Hallo", "Salam"
   ], []);
 
-  const [index, setIndex] = React.useState(0);
-  const [visible, setVisible] = React.useState(true);
+  const [index, setIndex] = useState(0);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     if (index < greetings.length - 1) {
